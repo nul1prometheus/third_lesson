@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import random
 from random import random, randint, choice
 
 import simple_draw as sd
@@ -33,9 +34,9 @@ point = sd.get_point(300, 300)
 #         bubble(point=point, step=1)
 
 # Нарисовать 100 пузырьков в произвольных местах экрана случайными цветами
+a=1
 
-
-for _ in range(1, 1010, 1):
+while a== True:
     x=randint(1, 1900)
     y=randint(1, 1000)
     radius=randint(5, 100)
@@ -45,6 +46,7 @@ for _ in range(1, 1010, 1):
     b=randint(0, 255)
     point = sd.get_point(x, y)
     sd.circle(center_position=point, radius=radius, color=[r, g, b], width=width)
+    sd.clear_screen()
 
 sd.pause()
 
